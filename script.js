@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function palindromChecker() {
     let inputValue = input.value;
     // Remove non-alphanumeric characters and convert to lowercase
-    let str = inputValue.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    let str = inputValue.replace(/[^a-zA-Z0-9\W]/g, "").toLowerCase();
     let reverseStr = str.split("").reverse().join("");
     resultText.classList.remove("hide");
     setTimeout(() => {
